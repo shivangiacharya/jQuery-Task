@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK</title>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <style>
+        #nonSelected{
+    position: absolute;
+    /* top: 10px;
+    left: 10px; */
+    width: 200px;
+    height: 50px;
+    background-color: #ab3fa8;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: black;
+    padding: 10px;
+        margin-bottom: 50px;
+    }
+
+    #selected{
+        position: absolute;
+        /* top: 10px;*/
+        left: 250px; 
+        width: 200px;
+        height: 50px;
+        background-color: #a7bf46;
+        border-width: 1px;
+        border-style: dotted;
+        border-color: black;
+        padding: 10px;
+        margin-bottom: 50px;
+
+    }
+        </style>
+</head>
+<body>
+    <!--Move one div element inside another using jQuery-->
+    <h1 style="color: black; text-align: center;">TASK 8</h1>
+    <div id="nonSelected">
+    <!--Declaring BUTTON TAGS -->
+        <button id="btnDefault" onclick="moveButton(this)" type="button">Button1</button>
+        <button id="btnPrimary" onclick="moveButton(this)" type="button" >Button2</button>
+        
+        <button id="btnDanger" onclick="moveButton(this)" type="button">Button3</button>
+          
+        </div>
+        <div id="selected">
+          </div>
+          <script>
+                        function moveButton(elem){
+                if( $(elem).parent().attr("id") == "nonSelected" ){
+                    $(elem).detach().appendTo('#selected');
+                }
+                else{
+                    $(elem).detach().appendTo('#nonSelected'); 
+                }
+            }
+          </script>
+
+<br>
+<br>
+<br>
+<!--Add a CSS class using jQuery.-->
+<h1 style="color: black; text-align: center;">TASK 30</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+    $(".ap1:first").addClass("intro");
+});
+});
+</script>
+<style>
+.intro {
+font-size: 150%;
+color: red;
+}
+</style>
+<h1>This is a heading</h1>
+
+<p class="ap1">This is a paragraph.</p>
+<p class="ap1">This is another paragraph.</p>
+
+<button>Add a class name to the first p element</button>
+<br>
+<hr>
+<!--Run code on document ready event in jQuery-->
+    <h1 style="color: black; text-align: center;">TASK 32</h1>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".p2").text("The DOM is now loaded and can be manipulated.");
+        });
+    </script>
+     <p class="p2">Not loaded yet.</p>
+<br>
+<hr>
+<!--Run code on click event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 33</h1>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            i{
+                padding: 20px;
+                font: 20px sans-serif;
+                background: rgb(4, 168, 113);
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $("i").click(function(){
+                $(this).slideUp();
+            });
+        });
+        </script>
+         <i>Click on me and I'll disappear.</i><br><br>
+         <i>Click on me and I'll disappear.</i><br><br>
+         <i>Click on me and I'll disappear.</i><br><br>
+<br>
+<hr>
+<!--Run code on double-click event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 34</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            b{
+                padding: 5px;  
+                font: 20px sans-serif;
+                background: rgb(214, 159, 5);
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $("b").dblclick(function(){
+                $(this).slideUp();
+            });
+        });
+        </script>
+        <b>Double-click on me and I'll disappear.</b>
+        <b>Double-click on me and I'll disappear.</b>
+        <b>Double-click on me and I'll disappear.</b>
+<br>
+<hr>
+<!--Run code on hover event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 35</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .p1{
+                padding: 20px;
+                font: 20px sans-serif;
+                background: #f2f2f2;
+            }
+            .p1.highlight{
+                background: rgb(96, 97, 98);
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".p1").hover(function(){
+                $(this).addClass("highlight");
+            }, function(){
+                $(this).removeClass("highlight");
+            });
+        });
+        </script>
+         <p class="p1">Place mouse pointer on me.</p>
+         <p class="p1">Place mouse pointer on me.</p>
+         <p class="p1">Place mouse pointer on me.</p>
+<br>
+<hr>
+<!--Run code on keypress event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 38</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .p3{
+                padding: 10px;
+                background: rgb(9, 215, 153);
+                display: none;
+            }
+            div{
+                margin: 20px 0;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            var i = 0;
+            $('input[type="text"]').keypress(function(){
+                $("span").text(i += 1);
+                $(".p3").show().fadeOut();
+            });
+        });
+        </script>
+            <input type="text">
+            <div>Keypress: <span>0</span></div>
+            <div><strong>Note:</strong> Enter something inside the input box and see the result.</div>
+            <p class="p3">Keypress is triggered.</p>
+<br>
+<hr>
+<!--Run code on keydown event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 39</h1>    
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .p4{
+                padding: 10px;
+                background: rgb(240, 166, 4);
+                display: none;
+            }
+            div{
+                margin: 20px 0;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            var i = 0;
+            $('input[type="text"]').keydown(function(){
+                $(".span1").text(i += 1);
+                $(".p4").show().fadeOut();
+            });
+        });
+        </script>
+            <input type="text">
+            <div>Keydown: <span class="span1">0</span></div>
+            <div><strong>Note:</strong> Enter something inside the input box and see the result.</div>
+            <p class="p4">Keydown is triggered.</p>   
+<br>
+<hr>
+<!--Run code on keyup event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 40</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .p5{
+                padding: 10px;
+                background: rgb(4, 182, 222);
+                display: none;
+            }
+            .div1{
+                margin: 20px 0;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            var i = 0;
+            $('input[type="text"]').keyup(function(){
+                $(".span3").text(i += 1);
+                $(".p5").show().fadeOut();
+            });
+        });
+        </script>
+       
+            <input type="text">
+            <div>Keyup: <span class="span3">0</span></div>
+            <div class="div1"><strong>Note:</strong> Enter something inside the input box and see the result.</div>
+            <p class="p5">Keyup is triggered.</p>
+<br>
+<hr>
+<!--Run code on change event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 41</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("select").change(function(){
+                var selectedOption = $(this).find(":selected").val();
+                alert("You have selected - " + selectedOption);
+            });
+        });
+        </script>
+       
+            <form>
+                <label>City:</label>
+                <select>
+                    <option>London</option>
+                    <option>Paris</option>
+                    <option>New York</option>
+                </select>
+            </form>
+<br>
+<hr>
+<!--Run code on change event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 42</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            label{
+                display: block;
+                margin: 5px 0;
+            }
+            label span{
+                display: none;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).next("span").show().fadeOut("slow");
+            });
+        });
+        </script>
+       
+            <form>
+                <label>Email: <input type="text"> <span>focus fire</span></label>
+                <label>Password: <input type="password"> <span>focus fire</span></label>
+                <label><input type="submit" value="Sign In"> <span>focus fire</span></label>
+            </form>
+<br>
+<hr>
+<!--Run code on blur event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 43</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            label{
+                display: block;
+                margin: 5px 0;
+            }
+            label span{
+                display: none;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $("input").blur(function(){
+                $(this).next("span").show().fadeOut("slow");
+            });
+        });
+        </script>
+
+            <form>
+                <label>Email: <input type="text"> <span>blur fire</span></label>
+                <label>Password: <input type="password"> <span>blur fire</span></label>
+                <label><input type="submit" value="Sign In"> <span>blur fire</span></label>
+            </form>
+<br>
+<hr>
+<!--Run code on resize event in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 45</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .p8{
+                padding: 20px;
+                font: 20px sans-serif;
+                background: #f0e68c;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(window).resize(function() {
+                $(window).bind("resize", function(){ 
+                    $(".p8").text("Window width: " + $(window).width() + ", " + "Window height: " + $(window).height());
+                });
+            });
+        });
+        </script>
+            <p class="p8">Open the output in a new tab and resize the browser window by dragging the corners.</p>
+<br>
+<hr>
+<!--Creating a simple show hide effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 47</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+        .pa1{
+                padding: 20px;
+                background: #a65dc3;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Hide displayed paragraphs
+            $(".hide-btn").click(function(){
+                $(".pa1").hide();
+            });
+            
+            // Show hidden paragraphs
+            $(".show-btn").click(function(){
+                $(".pa1").show();
+            });
+        });
+        </script>
+
+            <button type="button" class="hide-btn">Hide Paragraphs</button> 
+            <button type="button" class="show-btn">Show Paragraphs</button>
+            <p class="pa1">This is a paragraph.</p>
+            <p class="pa1">This is another paragraph.</p>
+<br>
+<hr>
+<!--Creating animated show hide effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 48</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pa2{
+                padding: 15px;
+                background: #f08cbb;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Hide displayed paragraphs with different speeds
+            $(".hide-btttn").click(function(){
+                $(".pa2.normal").hide();
+                $(".pa2.fast").hide("fast");
+                $(".pa2.slow").hide("slow");
+                $(".pa2.very-fast").hide(50);
+                $(".pa2.very-slow").hide(2000);
+            });
+            
+            // Show hidden paragraphs with different speeds
+            $(".show-btttn").click(function(){
+                $(".pa2.normal").show();
+                $(".pa2.fast").show("fast");
+                $(".pa2.slow").show("slow");
+                $(".pa2.very-fast").show(50);
+                $(".pa2.very-slow").show(2000);
+            });
+        });
+        </script>
+
+            <button type="button" class="hide-btttn">Hide Paragraphs</button> 
+            <button type="button" class="show-btttn">Show Paragraphs</button>
+            <p class="pa2 very-fast">This paragraph will show/hide with very fast speed.</p>
+            <p class="pa2 normal">This paragraph will show/hide with default speed.</p>
+            <p class="pa2 fast">This paragraph will show/hide with fast speed.</p>
+            <p class="pa2 slow">This paragraph will show/hide with slow speed.</p>
+            <p class="pa2 very-slow">This paragraph will show/hide with very slow speed.</p>
+<br>
+<hr>
+<!--Creating simple toggle effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 49</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pa3{
+                padding: 15px;
+                background: #0995b5;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Toggles paragraphs display
+            $(".toggle-btn").click(function(){
+                $(".pa3").toggle();
+            });
+        });
+        </script>
+        
+            <button type="button" class="toggle-btn">Toggle Paragraphs</button> 
+            <p class="pa3">This is a paragraph.</p>
+            <p class="pa3">This is another paragraph.</p>
+<br>
+<hr>
+<!--Creating animated toggle effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 50</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pa4{
+                padding: 15px;
+                background: #F0E68C;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Toggles paragraphs with different speeds
+            $(".toggle-btn").click(function(){
+                $(".pa4.normal").toggle();
+                $(".pa4.fast").toggle("fast");
+                $(".pa4.slow").toggle("slow");
+                $(".pa4.very-fast").toggle(50);
+                $(".pa4.very-slow").toggle(2000);
+            });
+        });
+        </script>
+
+            <button type="button" class="toggle-btn">Toggle Paragraphs</button>
+            <p class="pa4 very-fast">This paragraph will show/hide with very fast speed.</p>
+            <p class=" pa4 normal">This paragraph will show/hide with default speed.</p>
+            <p class="pa4 fast">This paragraph will show/hide with fast speed.</p>
+            <p class="pa4 slow">This paragraph will show/hide with slow speed.</p>
+            <p class="pa4 very-slow">This paragraph will show/hide with very slow speed.</p>
+<br>
+<hr>
+<!--Creating fade-in and fade-out effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 51</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pa5{
+                padding: 15px;
+                background: #cb7caa;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Fadeing out displayed paragraphs
+            $(".out-bttn").click(function(){
+                $(".pa5").fadeOut();
+            });
+            
+            // Fading in hidden paragraphs
+            $(".in-bttn").click(function(){
+                $(".pa5").fadeIn();
+            });
+        });
+        </script>
+       
+            <button type="button" class="out-bttn">Fade Out Paragraphs</button>
+            <button type="button" class="in-bttn">Fade In Paragraphs</button>
+            <p class="pa5">This is a paragraph.</p>
+            <p class="pa5">This is another paragraph.</p>
+<br>
+<hr>
+<!--Setting the duration of fading effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 52</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pa6{
+                padding: 15px;
+                background: #DDA0DD;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Fading out displayed paragraphs with different speeds
+            $(".out-bttttn").click(function(){
+                $(".pa6.normal").fadeOut();
+                $(".pa6.fast").fadeOut("fast");
+                $(".pa6.slow").fadeOut("slow");
+                $(".pa6.very-fast").fadeOut(50);
+                $(".pa6.very-slow").fadeOut(2000);
+            });
+            
+            // Fading in hidden paragraphs with different speeds
+            $(".in-bttttn").click(function(){
+                $(".pa6.normal").fadeIn();
+                $(".pa6.fast").fadeIn("fast");
+                $(".pa6.slow").fadeIn("slow");
+                $(".pa6.very-fast").fadeIn(50);
+                $(".pa6.very-slow").fadeIn(2000);
+            });
+        });
+        </script>
+        
+            <button type="button" class="out-bttttn">Fade Out Paragraphs</button>
+            <button type="button" class="in-bttttn">Fade In Paragraphs</button>
+            <p class="pa6 very-fast">This paragraph will fade in/out with very fast speed.</p>
+            <p class="pa6 normal">This paragraph will fade in/out with default speed.</p>
+            <p class="pa6 fast">This paragraph will fade in/out with fast speed.</p>
+            <p class="pa6 slow">This paragraph will fade in/out with slow speed.</p>
+            <p class="pa6 very-slow">This paragraph will fade in/out with very slow speed.</p>
+<br>
+<hr>
+<!--Creating fade toggle effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 53</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pa7{
+                padding: 15px;
+                background: #ab7bde;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Toggles paragraphs display with fading
+            $(".toggle-btttttn").click(function(){
+                $(".pa7").fadeToggle();
+            });
+        });
+        </script>
+       
+            <button type="button" class="toggle-btttttn">Fade Toggle Paragraphs</button> 
+            <p class="pa7">This is a paragraph.</p>
+            <p class="pa7">This is another paragraph.</p>
+<br>
+<hr>
+<!--Setting the duration of fade toggle effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 54</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pa8{
+                padding: 15px;
+                background: #DDA0DD;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Fade Toggles paragraphs with different speeds
+            $(".toggle-bttttttn").click(function(){
+                $(".pa8.normal").fadeToggle();
+                $(".pa8.fast").fadeToggle("fast");
+                $(".pa8.slow").fadeToggle("slow");
+                $(".pa8.very-fast").fadeToggle(50);
+                $(".pa8.very-slow").fadeToggle(2000);
+            });
+        });
+        </script>
+      
+            <button type="button" class="toggle-bttttttn">Fade Toggle Paragraphs</button>
+            <p class="pa8 very-fast">This paragraph will fade in/out with very fast speed.</p>
+            <p class="pa8 normal">This paragraph will fade in/out with default speed.</p>
+            <p class="pa8 fast">This paragraph will fade in/out with fast speed.</p>
+            <p class="pa8 slow">This paragraph will fade in/out with slow speed.</p>
+            <p class="pa8 very-slow">This paragraph will fade in/out with very slow speed.</p>
+<br>
+<hr>
+<!--55.	Fading elements to a certain opacity in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 55</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pa9{
+                display: none;
+                padding: 15px;
+                background: #e281e2;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Fade to paragraphs with different opacity
+            $(".to-btttttttn").click(function(){
+                $(".pa9.none").fadeTo("fast", 0);
+                $(".pa9.partial").fadeTo("slow", 0.5);
+                $(".pa9.complete").fadeTo(2000, 1);
+            });
+        });
+        </script>
+
+            <button type="button" class="to-btttttttn">Fade To Hidden Paragraphs</button>
+            <p class="pa9 none">This is a paragraph.</p>
+            <p class="pa9 partial">This is another paragraph.</p>
+            <p class="pa9 complete">This is one more paragraph.</p>
+<br>
+<hr>
+<!--56.	Creating slide-up and slide-down effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 56</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .paa1{
+                padding: 15px;
+                background: #c54eb7;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Slide up displayed paragraphs
+            $(".up-bttnn").click(function(){
+                $(".paa1").slideUp();
+            });
+            
+            // Slide down hidden paragraphs
+            $(".down-bttnn").click(function(){
+                $(".paa1").slideDown();
+            });
+        });
+        </script>
+        </head>
+        <body>
+            <button type="button" class="up-bttnn">Slide Up Paragraphs</button> 
+            <button type="button" class="down-bttnn">Slide Down Paragraphs</button>
+            <p class="paa1">This is a paragraph.</p>
+            <p class="paa1">This is another paragraph.</p>
+<br>
+<hr>
+<!--57. Setting the duration of sliding effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 57</h1>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .paa2{
+                padding: 15px;
+                background: #ad6ada;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Sliding up displayed paragraphs with different speeds
+            $(".up-btttnn").click(function(){
+                $(".paa2.normal").slideUp();
+                $(".paa2.fast").slideUp("fast");
+                $(".paa2.slow").slideUp("slow");
+                $(".paa2.very-fast").slideUp(50);
+                $(".paa2.very-slow").slideUp(2000);
+            });
+            
+            // Sliding down hidden paragraphs with different speeds
+            $(".down-btttnn").click(function(){
+                $(".paa2.normal").slideDown();
+                $(".paa2.fast").slideDown("fast");
+                $(".paa2.slow").slideDown("slow");
+                $(".paa2.very-fast").slideDown(50);
+                $(".paa2.very-slow").slideDown(2000);
+            });
+        });
+        </script>
+        
+            <button type="button" class="up-btttnn">Slide Up Paragraphs</button> 
+            <button type="button" class="down-btttnn">Slide Down Paragraphs</button>
+            <p class="paa2 very-fast">This paragraph will fade in/out with very fast speed.</p>
+            <p class="paa2 normal">This paragraph will fade in/out with default speed.</p>
+            <p class="paa2 fast">This paragraph will fade in/out with fast speed.</p>
+            <p class="paa2 slow">This paragraph will fade in/out with slow speed.</p>
+            <p class="paa2 very-slow">This paragraph will fade in/out with very slow speed.</p>
+<br>
+<hr>
+<!--58.	Creating slide toggle effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 58</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .paa3{
+                padding: 15px;
+                background: #e04c79;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Toggles paragraphs display with sliding
+            $(".toggle-btnn").click(function(){
+                $(".paa3").slideToggle();
+            });
+        });
+        </script>
+        </head>
+        <body>
+            <button type="button" class="toggle-btnn">Slide Toggle Paragraphs</button> 
+            <p class="paa3">This is a paragraph.</p>
+            <p class="paa3">This is another paragraph.</p>
+<br>
+<hr>
+<!--59.	Setting the duration of slide toggle effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 59</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .paa4{
+                padding: 15px;
+                background: #f0803f;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            // Slide Toggles paragraphs with different speeds
+            $(".toggle-btnnn").click(function(){
+                $(".paa4.normal").slideToggle();
+                $(".paa4.fast").slideToggle("fast");
+                $(".paa4.slow").slideToggle("slow");
+                $(".paa4.very-fast").slideToggle(50);
+                $(".paa4.very-slow").slideToggle(2000);
+            });
+        });
+        </script>
+
+            <button type="button" class="toggle-btnnn">Fade Toggle Paragraphs</button>
+            <p class="paa4 very-fast">This paragraph will slide up/down with very fast speed.</p>
+            <p class="paa4 normal">This paragraph will slide up/down with default speed.</p>
+            <p class="paa4 fast">This paragraph will slide up/down with fast speed.</p>
+            <p class="paa4 slow">This paragraph will slide up/down with slow speed.</p>
+            <p class="paa4 very-slow">This paragraph will slide up/down with very slow speed.</p>
+<br>
+<hr>
+<!--60.	Creating animation effect in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 60</h1>     
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            img{
+                position: relative; /* Required to move element */
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".bt1").click(function(){
+                $("img").animate({
+                    left: 300
+                });
+            });
+        });
+        </script>
+        
+            <button type="button" class="bt1">Start Animation</button>
+            <p class="paa5">
+                <img src="https://i.pinimg.com/originals/b3/4a/e9/b34ae9ee8f1bd7bf228279c688dc3fc7.jpg" style="height: 300px; width: 300px;" alt="Mushroom">
+            </p> 
+
+<br>
+<hr>
+<!--61.	Animate multiple CSS properties in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 61</h1>  
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background: #c073dc;
+                margin-top: 30px;
+                border-style: solid; /* Required to animate border width */
+                border-color: #ee2d9a;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".butt").click(function(){
+                $(".box").animate({
+                    width: "300px",
+                    height: "300px",
+                    marginLeft: "150px",
+                    borderWidth: "10px",
+                    opacity: 0.5
+                });
+            });
+        });
+        </script>
+        
+            <button type="button" class="butt">Start Animation</button>
+            <div class="box"></div>       
+<br>
+<hr>
+<!--62.	Animate multiple CSS properties only by one in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 62</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .box1{
+                width: 200px;
+                height: 200px;
+                background: #e3a848;
+                margin-top: 30px;
+                border-style: solid; /* Required to animate border width */
+                border-color: #d5591c;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".butto").click(function(){
+                $(".box1")
+                    .animate({width: "300px"})
+                    .animate({height: "300px"})
+                    .animate({marginLeft: "150px"})
+                    .animate({borderWidth: "10px"})
+                    .animate({opacity: 0.5});
+            });
+        });
+        </script>
+
+            <button type="button" class="butto">Start Animation</button>
+            <div class="box1"></div>
+<br>
+<hr>
+<!--63.	Animate CSS property using relative values in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 63</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .box2{
+                width: 200px;
+                height: 200px;
+                background: #9d7ede;
+                margin-top: 30px;
+                position: relative; /* Required to move element */
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".btt1").click(function(){
+                $(".box2").animate({            
+                    top: "+=50px",
+                    left: "+=50px",
+                    width: "+=50px",
+                    height: "+=50px"
+                });
+            });
+        });
+        </script>
+        
+            <button type="button" class="btt1">Start Animation</button>
+            <p><strong>Note:</strong> Click the "Start Animation" button multiple times</p>
+            <div class="box2"></div>
+<br>
+<hr>
+<!--64.	Animate CSS property with predefined values in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 64</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .box4{
+                width: 80%;
+                height: 200px;
+                background: #9d7ede;
+                margin-top: 30px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".btt2").click(function(){
+                $(".box4").animate({
+                    width: 'toggle'
+                });
+            });
+        });
+        </script>
+        
+            <button type="button" class="btt2">Toggle Animation</button>
+            <div class="box4"></div>
+<br>
+<hr>
+<!--65.	Method chaining in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 65</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+        /* Some custom styles to beautify this example */
+        .pag1 {
+            width: 200px;
+            padding: 40px 0;
+            font: bold 24px sans-serif;
+            text-align: center;
+            background: #92ba92;
+            border: 1px solid #63a063;
+            box-sizing: border-box;
+        }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".start").click(function(){
+                $(".pag1").animate({width: "100%"}).animate({fontSize: "46px"}).animate({borderWidth: 30});
+            });
+            $(".reset").click(function(){
+                $(".pag1").removeAttr("style");
+            });
+        });  
+        </script>
+        </head>
+        <body>
+            <p class="pag1">Hello World!</p>
+            <button type="button" class="start">Start Chaining</button>
+            <button type="button" class="reset">Reset</button>
+<br>
+<hr>
+<!--67.	Exceptions method chaining in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 67</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .test{
+                padding: 15px;
+                background: yellow;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".bon1").click(function(){
+                // This will work
+                $(".h1s").html("Hello World!").addClass("test").fadeOut(1000);
+                
+                // This will NOT work
+                $(".pag2").html().addClass("test");
+            });
+        });
+        </script>
+        
+            <h1 class="h1s">This is a heading</h1>
+            <p class="pag2">This is a paragraph.</p>
+            <button type="button" class="bon1">Start Chaining</button>
+<br>
+<hr>
+<!--68.	jQuery effect method without a callback function-->
+<h1 style="color: black; text-align: center;">TASK 68</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .pagg1{
+                background:rgb(145, 71, 201);
+                font-size: 24px;
+                padding:20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".bonn1").click(function(){
+                $(".pagg1").slideToggle("slow");
+                alert("The slide toggle effect has completed.");
+            });   
+        });
+        </script>
+
+            <p class="pagg1">This is paragraph.</p>
+            <button type="button" class="bonn1">Click me</button>
+<br>
+<hr>
+<!--69.	jQuery effect method with a callback function-->
+<h1 style="color: black; text-align: center;">TASK 69</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .par1{
+                background:rgb(8, 226, 120);
+                font-size: 24px;
+                padding:20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".bu1").click(function(){
+                $(".par1").slideToggle("slow", function(){
+                    alert("The slide toggle effect has completed.");
+                });
+            });   
+        });
+        </script>
+
+            <p class="par1">This is paragraph.</p>
+            <button type="button" class="bu1">Click me</button>
+<br>
+<hr>
+<!--70.	Executing callback multiple times in jQuery-->
+<h1 style="color: black; text-align: center;">TASK 70</h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            .h1aa{
+                display:none;
+                background:rgb(255, 0, 200);
+                padding:20px;
+            }
+            .pg1{
+                background:rgb(5, 161, 245);
+                font-size: 24px;
+                padding:20px;
+            }
+        </style>
+        <script>
+        $(document).ready(function(){
+            $(".boo1").click(function(){
+                $("h1, .pg1").slideToggle("slow", function(){
+                    alert("The slide toggle effect has completed.");
+                });
+            });   
+        });
+        </script>
+
+            <h1 class="h1aa">This is heading</h1>
+            <p class="pg1">This is paragraph.</p>
+            <button type="button" class="boo1">Click me</button>
+
+</body>
+</html>

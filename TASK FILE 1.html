@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK</title>
+    
+    <style>
+        .scroll {
+            height: 800px;
+            background-color: rgb(209, 195, 102);
+        }
+
+    </style>
+    </style>
+</head>
+<body>
+    <h1 style="color: black; text-align: center;">TASK 1</h1>
+    <h1 style="color: rgb(9, 10, 9); text-align: center; font-size: 40px;">
+        jQuery 
+    </h1>
+    <b style="font-size: 30px; color: rgb(137, 43, 226);">
+        Scroll to the top of the page
+        using JavaScript/jQuery?
+    </b>
+    <p style="font-size: 20px; color: rgb(5, 76, 176);">
+        Click on the button below to
+        scroll to the top of the page.
+    </p>
+    <p class="scroll" style="font-size: 40px; text-align: center; color: rgb(33, 27, 27);">
+        JavaScript/ jQuery <br>
+        The Coming of the King<br>
+        The Coming of the King is a delightful morality tale featured in Ms. Richards' collection of stories and poems, The Pig Brother and Other Fables and Stories (1881). Working together to make positive changes and act kindly to others doesn't require a king at all, but the warmth in our hearts can be as golden as a crown!
+    </p>
+    <button onclick="scrollToTop()">
+        Click to scroll to top
+    </button>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        function scrollToTop() {
+            $(window).scrollTop(0);
+        }
+    </script>
+    <br>
+    <hr>
+    <!--Disable Right Click Menu-->
+    <h1 style="color: black; text-align: center;">TASK 2</h1>
+        
+        <script src=
+                "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+       
+        
+        <script>
+            $(document).ready(function(){
+                    $(document).bind("contextmenu",function(e){
+                        alert('right click disabled');
+                        return false;
+                    });
+            });
+        </script>
+        <p style="font-size: 50px; color: black;">Disable Right Click Menu</p>
+    <br>
+    <hr>
+    <!--Blinking Text using jQuery-->
+    <h1 style="color: black; text-align: center;">TASK 3</h1>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    function blink_text() {
+        $('.blink').fadeOut(500);
+        $('.blink').fadeIn(500);
+    }
+    setInterval(blink_text, 1000);
+    </script>
+    <h1 class="blink">Blinking The Text</h1>
+    <br>
+    <hr>
+    <!--Zebra Stripes Table Effect.-->
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 16px;
+          font-family: 'Times New Roman', Times, serif;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #e14c85;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <h1 style="color: black; text-align: center;">TASK 4</h1>
+        <h2 style="text-align: center; color: rgb(156, 25, 243);">Zebra Striped Table</h2>        
+        <table>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Points</th>
+          </tr>
+          <tr>
+            <td>Shivangi</td>
+            <td>Acharya</td>
+            <td>80</td>
+          </tr>
+          <tr>
+            <td>Khushi</td>
+            <td>Sharma</td>
+            <td>74</td>
+          </tr>
+          <tr>
+            <td>Adam</td>
+            <td>Johnson</td>
+            <td>67</td>
+          </tr>
+        </table>
+        </body>
+    <br>
+    <hr>
+    <!--Print A page Using jQuery-->
+    <h1 style="color: black; text-align: center;">TASK 5</h1>
+    <h3>
+        Print a page using jQuery.
+    </h3>
+    <div>
+        <a  class="printPage" href="#">Print</a>
+    </div>
+    <script>
+        $('a.printPage').click(function(){
+           window.print();
+           return false;
+        });
+    </script>
+    <br>
+    <hr>
+    <!--Make First Word bold of al  element.-->
+    <h1 style="color: black; text-align: center;">TASK 6</h1>
+    <h1>Aesop's Fables</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <h3>Synopsis: Some of the most famous short stories come from Aesop's Fables. These are short stories that have a moral and teach the reader a lesson:</h3>
+
+        <i style="font-size: 20px;">Tortoise and the Hare.</i><br>
+        <i style="font-size: 20px;">TheBoy Who Cried Wolf.</i><br>
+        <i style="font-size: 20px;">Androcles and the Lion.</i><br>
+        <i style="font-size: 20px;">TheTown Mouse and The Country Mouse.</i><br>
+        <i style="font-size: 20px;">TheCrow and the Pitcher.</i><br>
+        <script>
+            $('i').each(function(){  
+            var idata = $(this);  
+            idata.html( idata.text().replace(/(^\w+)/,'<strong>$1</strong>') );  
+        }); 
+        </script>
+    <br>
+    <hr>
+    <!--Create a div using jQuery with style Tag.-->
+    <h1 style="color: black; text-align: center;">TASK 7</h1>
+    <script src="https://code.jquery.com/jquery-git.js">
+    </script>
+  
+    <style>
+        .divClass {
+            height: 40px;
+            width: 200px;
+            border: 1px solid rgb(11, 15, 6);
+            color: white
+        }
+    </style>
+    <h2 style="color:rgb(94, 4, 158)">Create A Div </h2>
+    <div style="height:10px;"></div>
+    <div id='parent'>
+        This is parent div
+    </div>
+    <div style="height:10px;"></div>
+    <input type="button" 
+           value="Prepend text div  " 
+           onclick="prependDiv()" />
+    <script>
+        function prependDiv() {
+            $(document).ready(function() {
+                var object = {
+                    id: "divID",
+                    class: "divClass",
+                    css: {
+                        "color": "green"
+                    }
+                };
+        <!--Prepend object is created before the parent div-->
+                var prependObject = $("<div>", object);
+                prependObject.html("Prepend text is GFG");
+                $(prependObject).prependTo($('#parent'));
+            });
+        }
+    </script>
+    <br>
+    <hr>
+    <!--Add a list element within an unordered list element.-->
+    <h1 style="color: black; text-align: center;">TASK 9</h1>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <script>
+        function new_element(){
+            $("#header ul").append('<li>Added</li>');
+        }
+        
+    </script>
+    <div id="header">
+        <ul>
+            <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+            <li><a href="https://www.w3schools.com/js/default.asp">JAVASCRIPT</a></li>
+        </ul>
+    </div>
+        <input type="button" value="Click to add new li element" onclick="new_element()" />
+    <br>
+    <hr>
+    <!--Remove all the Option of a select box and then add one option and select it.-->
+    <h1 style="color: black; text-align: center;">TASK 10</h1>
+    <head>
+        <script src=
+                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+       </script>
+      
+        <!-- Basic inline styling -->
+    </head>
+      <body>
+        <h1 style="color: rgb(116, 4, 120); font-size: 40px;">JS jQuery Task</h1>
+        <p style="font-size: 25px;  font-weight: bold;" >
+           jQuery - Remove all options of select box 
+           then add one option and select it.
+        </p>
+      
+        <select id="geek-select" style="cursor: pointer;">
+          <option value="geek1">HTML</option>
+          <option value="geek2">CSS</option>
+          <option value="geek3">Bootstrap</option>
+          <option value="geek4">Javascript</option>
+        </select>
+        <button onclick="removeThenAdd()" style="display: block; cursor:pointer; margin: 5rem auto 0 auto;">
+          Click me to remove all options and then add one option
+        </button>
+        <script type="text/javascript">
+          function removeThenAdd() {      
+            $("#geek-select").find("option").remove().end().append(
+            '<option value = "gfg">Model 1</option>');
+          }
+        </script>
+      </body>
+      <br>
+      <hr>
+      <!--underlined all the words of a text using jQuery.-->
+      <h1 style="color: black; text-align: center;">TASK 11</h1>
+      <script src="https://code.jquery.com/jquery-git.js"></script>
+      <script>
+        $('p').each(function() {
+
+        var text_words = $(this).text().split(' ');
+
+	    $(this).empty().html(function() {
+
+            for (i = 0; i < text_words.length; i++) {
+                if (i === 0) {
+                    $(this).append('<span>' + text_words[i] + '</span>');
+                } else {
+                    $(this).append(' <span>' + text_words[i] + '</span>');
+                }
+		    }
+	
+	    });
+
+    });
+      </script>
+      <p><span style="text-decoration: underline;">
+        Synopsis: A 9-year-old boy looks down and his pants are wet and there is a puddle between his legs; he has peed his pants. This is an awful situation for any person to be in, but just when he thought this was the worst day in his life, Susie slips and spills a fish bowl of water right in the boy's lap. The boy is so happy that no one noticed before the water got spilt on him. The teacher rushes him to the nurse because his pants are soaked in fish water, his friends feel bad for him, and Susie whispers to him, 'I've wet my pants too.' This shows kids that we all have bad days and it is important to remember to have empathy at all times.</span> </p>
+    <br>
+    <hr>
+    <!--Remove All CSS classes using jQuery.-->
+    <h1 style="color: black; text-align: center;">TASK 12</h1>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+      <script>
+         $(document).ready(function() {
+           $("#button1").click(function(){
+             $("p").removeClass();
+           });
+         });
+      </script>
+       
+      <style>
+         .red { 
+            color:red;
+            text-align: center;
+            font-size: 20px;
+         }
+         .blue { 
+            color:blue;
+            text-align: center;
+            font-size: 20px;
+         }
+      </style>
+      <p class = "red" >This is first paragraph.</p>
+      <p class = "blue">This is second paragraph.</p>
+      <button id="button1">Remove</button>
+    <br>
+    <hr>
+    <!-- Remove style added with .css() function using jQuery.-->
+    <h1 style="color: black; text-align: center;">TASK 13</h1>
+    <head>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <style>
+     #MyInput{
+        margin: 10px 0;
+        padding: 0 5px;
+        font-size: 2em;
+        border: 2px double green;
+        font-family: sans-serif;
+    }
+    </style>
+    </head>
+    <body>
+
+    </body>
+    <h1 id="MyInput">jQuery Exercises</h1>
+  
+    <input type="button" value="Remove border style" onClick="remove_style()" />
+    <script>
+        function remove_style() {
+            $("#MyInput").css("border", "0");
+            }
+    </script>
+     </body>
+    <br>
+    <hr>
+    <!-- Distinguish between left and right mouse click with jQuery..-->
+    <h1 style="color: black; text-align: center;">TASK 14</h1>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <style>
+          #divId {
+           color: black;
+            font-size: 30px;
+            text-align: center;
+          }
+        </style>
+      </head>
+    <div id="divId">
+        [Click here]
+      </div>
+      <script>
+        $('#divId').mousedown(function(event) {
+            switch(event.which) {
+              case 1:
+                $('#divId').html('Left Mouse button pressed.');
+                break;
+              case 2:
+                $('#divId').html('Middle Mouse button pressed.');
+                break;
+              case 3:
+                $('#divId').html('Right Mouse button pressed.');
+                break;
+              default:
+                $('#divId').html('You have a strange Mouse!');
+            }
+          });
+      </script>
+      <br>
+      <hr>
+      <!-- Code to detect whether the user has pressed 'Enter Key' using jQuer.-->
+      <h1 style="color: black; text-align: center;">TASK 15</h1>
+      <script src="https://code.jquery.com/jquery-git.js"></script>
+      <p>Input a value within the textbox and press Enter</p>
+        <form>
+            <input type="text" id="hello"></p>
+        </form>
+        <script>
+        $(document).keypress(function(e) {
+            if(e.which == 13) {
+                console.log('You pressed enter!');
+            }
+        });
+    </script>
+    <br>
+    <hr>
+    <!-- 16.	Count number of rows and columns in a table using jQueryr.-->
+    <h1 style="color: black; text-align: center;">TASK 16</h1>
+    <table id="tblCustomers" border="4" cellpadding="0" cellspacing="0">
+      <tbody>
+          <tr>
+              <th style="width: 90px">Customer Id</th>
+              <th style="width: 120px">Name</th>
+              <th style="width: 90px">Country</th>
+          </tr>
+          <tr>
+              <td>1</td>
+              <td>John Hammond</td>
+              <td>United States</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>Mudassar Khan</td>
+              <td>India</td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td>Suzanne Mathews</td>
+              <td>France</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>Robert Schidner</td>
+              <td>Russia</td>
+          </tr>
+      </tbody>
+  </table>
+  <br />
+  <br />
+  <input type="button" id="btnGetCount" value="Count Rows" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+     $(function () {
+          $("#btnGetCount").click(function () {
+              var totalRowCount = $("#tblCustomers tr").length;
+              var rowCount = $("#tblCustomers td").closest("tr").length;
+              var message = "Total Row Count: " + totalRowCount;
+              message += "\nRow Count: " + rowCount;
+              alert(message);
+          });
+      });
+  </script>
+  <br>
+  <hr>
+  <!--17.	How to get textarea text using jQuery-->
+  <h1 style="color: black; text-align: center;">TASK 17</h1> 
+  <script src="https://code.jquery.com/jquery-git.js"></script>
+  <textarea id="mytextarea" rows="4" cols="50">
+    
+  </textarea>
+  <script>
+    var text = $('textarea#mytextarea').val();  
+ console.log(text);
+  </script>
+
+  <br>
+  <hr>
+  <!--Access form input fields using jQuery.  -->
+  <h1 style="color: black; text-align: center;">TASK 18</h1> 
+  <script src="https://code.jquery.com/jquery-git.js"></script>
+  <form id="myForm" action="sample.php">
+    First name:<br>
+    <input type="text" name="firstname" value="FName">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="LName">
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
+    <p> Click Submit button to get all the forms elements and their values</p>
+    <script>
+      $('#myForm').submit(function() {
+        var values = $(this).serialize();
+        console.log(values);
+      });
+    </script>
+  <br>
+  <hr>
+  <!--Find the absolute position of an element using jQuery.-->
+  <h1 style="color: black; text-align: center;">TASK 19</h1> 
+      <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+      <div style="padding: 15px;">
+        <p>Hello</p>
+      </div>
+      <p style="margin-left: 10px;"></p>
+       
+      <script>
+      var p = $( "p" ).first();
+      var position = p.position();
+      $( "p" ).last().text( "left: " + position.left + ", top: " + position.top );
+      </script>
+
+    <br>
+    <hr>
+    <!--Add options to a drop-down list using jQuery.-->
+    <h1 style="color: black; text-align: center;">TASK 21</h1> 
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <p>List of Colors :</p>
+    <select id='myColors'>
+    <option value="Red">Red</option>
+    <option value="Green">Green</option>
+    <option value="White">White</option>
+     <option value="Black">Black</option>
+     </select>
+     <script>
+      var myOptions = {
+            val1 : 'Blue',
+            val2 : 'Orange'
+        };
+        var mySelect = $('#myColors');
+        $.each(myOptions, function(val, text) {
+            mySelect.append(
+                $('<option></option>').val(val).html(text)
+            );
+        });
+     </script>
+
+
+    <br>
+    <hr>
+    <!--Convert a jQuery object into a string.-->
+    <h1 style="color: black; text-align: center;">TASK 21</h1> 
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <div id="output"></div>
+        <script>
+          var element = $('<p>',{
+              text : "jQuery",
+              class : "demo"
+          });
+
+          $('#output').text( element.get(0).outerHTML);
+        </script>
+
+    <br>
+    <hr>
+    <!--22.	How to detect a textbox's content has changed using jQuery? .-->
+    <h1 style="color: black; text-align: center;">TASK 22</h1> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#myInput").on("input", function(){
+            // Print entered value in a div box
+            $("#result").text($(this).val());
+        });
+    });
+    </script>
+        <p><input type="text" placeholder="Type something..." id="myInput"></p>
+        <div id="result"></div>
+    <br>
+    <hr>
+    <!--Remove a specific value from an array using jQuery.-->
+    <h1 style="color: black; text-align: center;">TASK 23</h1> 
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <body>
+      Array before removing the element= 'Red', 'Green', 'White', 'black', 'Yellow'<br>
+      Array after removing the element= 'Red', 'Green', 'black', 'Yellow'
+    </body>
+    <script>
+          var y = ['Red', 'Green', 'White', 'black', 'Yellow'];
+      var remove_Item = 'White';
+
+      console.log('Array before removing the element = '+y);
+      y = $.grep(y, function(value) {
+        return value != remove_Item;
+      });
+      console.log('Array after removing the element = '+y);
+    </script>
+  <br>
+  <hr>
+  <!--24.	 Change button text using jQuery. .-->
+  <h1 style="color: black; text-align: center;">TASK 24</h1> 
+  <script src="https://code.jquery.com/jquery-git.js"></script>
+  <input type='button' value='Cancel' id='button5'>
+  <script>
+     $("#button5").prop('value', 'Save');
+  </script>
+
+  <br>
+  <hr>
+  <!--25.Set background-image using jQuery CSS property. .-->
+  <h1 style="color: black; text-align: center;">TASK 25</h1> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // Set background image of a div on click of the button
+        $("button").click(function(){
+            var imageUrl = "https://cutewallpaper.org/27/autumn-wallpaper-minimalist/1079928503.jpg";
+            $(".box").css("background-image", "url(" + imageUrl + ")");
+        });    
+    });
+    </script>
+     <div class="box" style="width: 1000px; height: 500px; border: 5px solid #333;"></div>
+     <p><button type="button">Set Background Image</button></p>
+
+     <br>
+     <hr>
+     <!--26.	Delete all table rows except first one using jQuery.-->
+     <h1 style="color: black; text-align: center;">TASK 26</h1> 
+     <script src="https://code.jquery.com/jquery-git.js"></script>
+
+     <table border="1" id="myTable1">
+      <tr>
+      <th>Year</th>
+      <th>Savings</th>
+      </tr>
+      <tr>
+      <td>2014</td>
+      <td>$10000</td>
+      </tr>
+      <tr>
+      <td>2015</td>
+      <td>$8000</td>
+      </tr>
+      <tr>
+      <td>2016</td>
+      <td>$9000</td>
+      </tr>
+      </table>
+      <p>
+      <input id="button4" type="button" value="Click to remove all rows except first one"/></p>
+          <script>
+                        $(document).ready(function(){ 
+              $('#button4').click(function(){ 
+                $("#myTable1").find("tr:gt(0)").remove();
+              });
+            });
+          </script>
+  <br>
+  <hr>
+  <!--27.	How to get the selected value and currently selected text of a dropdown box using jQuery? -->
+  <h1 style="color: black; text-align: center;">TASK 27</h1>
+  <script src="https://code.jquery.com/jquery-git.js"></script>
+  <select id="ddid">
+    <option id="op1" value="red">Red</option>
+    <option id="op2" value="green">Green</option>
+    <option id="op3" value="blue">Blue</option>
+    <option id="op4" value="white">White</option>
+    </select>
+     <input id="button1" type="button" value="Click!" />
+  <script>
+            $(document).ready(function(){ 
+        $('#button1').click(function(){ 
+        console.log($('#op2').val());
+        console.log($('#op4').val());
+        console.log($('#ddid :selected').text());
+        });
+        });
+  </script>
+  <br>
+  <hr>
+  <!--28.	Disable a link using jQuery.-->
+  <h1 style="color: black; text-align: center;">TASK 28</h1>
+  <script src="https://code.jquery.com/jquery-git.js"></script>
+  <a href="https://www.w3resource.com/jquery-exercises/">jQuery Exercises, Practice, Solution</a>
+ <p></p>
+  <input id="button3" type="button" value="Click to remove the link!" />
+  <script>
+        $(document).ready(function(){ 
+      $('#button3').click(function(){ 
+      $("a").removeAttr('href');    
+      });
+    });
+  </script>
+
+  <br>
+  <hr>
+  <!--29.	Change a CSS class using jQuery.-->
+  <h1 style="color: black; text-align: center;">TASK 29</h1>
+  <script src="https://code.jquery.com/jquery-git.js"></script>
+  <p id="pid"  class="center" style="text-align: center; color:#e14c85;"> jQuery Exercises</p>
+  <input id="button6" type="button" value="Click to change the Class" />
+  <script>
+        $(document).ready(function(){ 
+      $('#button6').click(function(){   $('#pid').removeClass('center').addClass('large');       
+      });
+    });
+  </script>
+  <style>
+      p.large {
+        font-size: 200%;
+        color: rgb(15, 193, 77);
+    }
+  </style>
+
+  <br>
+  <hr>
+  <!--31.Count child elements using jQuery.-->
+  <h1 style="color: black; text-align: center;">TASK 31</h1>
+  <div id="parentID">
+    <p>Red</p>
+    <p>White</p>
+    <p>Green</p>
+    <p>Black</p>
+    <p>Blue</p>
+    <p>Orange</p>
+</div>
+  
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" 
+    crossorigin="anonymous">
+</script>
+
+<script>
+           
+    // Here we count the child element in parentID
+    var count = $("#parentID p").length;
+    document.writeln(count);
+</script>
+  
+
+
+
+</body>
+</html>
